@@ -325,10 +325,6 @@ img {
     border-radius: 4px; /* Optional: adds slight rounding to the corners */
 }
 
-.hidden-experience {
-    display: none;
-}
-
 
 .experience-entry h3 {
     margin-top: 0;
