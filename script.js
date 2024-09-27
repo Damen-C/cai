@@ -47,7 +47,7 @@ loadMoreExperiencesBtn.addEventListener('click', (e) => {
     e.preventDefault();
     experiencesVisible = !experiencesVisible;
     hiddenExperiences.forEach(experience => {
-        experience.style.display = experiencesVisible ? 'flex' : 'none';
+        experience.style.display = experiencesVisible ? 'block' : 'none';
     });
     loadMoreExperiencesBtn.textContent = experiencesVisible ? 'Load Less' : 'Load More';
 });
