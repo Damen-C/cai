@@ -330,6 +330,11 @@ img {
     margin-top: 0;
 }
 
+/* Hide additional experience entries */
+.hidden-experience {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .experience-entry {
         flex-direction: column;

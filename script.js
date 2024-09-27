@@ -37,3 +37,16 @@ loadMoreBlogsBtn.addEventListener('click', (e) => {
     loadMoreBlogsBtn.textContent = blogsVisible ? 'Load Less' : 'Load More';
 });
 
+// Load More/Less Functionality for Experiences
+const loadMoreExperiencesBtn = document.getElementById('loadMoreExperiencesBtn');
+const hiddenExperiences = document.querySelectorAll('.hidden-experience');
+let experiencesVisible = false;
+
+loadMoreExperiencesBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    experiencesVisible = !experiencesVisible;
+    hiddenExperiences.forEach(experience => {
+        experience.style.display = experiencesVisible ? 'flex' : 'none';
+    });
+    loadMoreExperiencesBtn.textContent = experiencesVisible ? 'Load Less' : 'Load More';
+});
