@@ -274,10 +274,6 @@ img {
     display: none;
 }
 
-.hidden-experience {
-    display: none;
-}
-
 /* Load More Link Container */
 .load-more-container {
     display: flex;
@@ -328,6 +324,11 @@ img {
     margin-right: 20px;
     border-radius: 4px; /* Optional: adds slight rounding to the corners */
 }
+
+.hidden-experience {
+    display: none;
+}
+
 
 .experience-entry h3 {
     margin-top: 0;
