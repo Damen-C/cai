@@ -1,0 +1,348 @@
+/* Import Helvetica font */
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    height: 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 50px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #000;
+}
+
+.social-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.social-links a:hover {
+    color: #000;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    scroll-margin-top: 20px; 
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 10px;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Project Entries */
+.project, .blog-post, .education-entry, .experience-entry {
+    margin-bottom: 40px;
+}
+
+.project h3, .blog-post h3, .education-entry h3, .experience-entry h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eaeaea;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Existing styles... */
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Hover effect for Hamburger Icon */
+.hamburger:hover .bar {
+    background-color: #007BFF;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    /* Hide navigation links */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 70px; /* Adjust based on your nav height */
+        left: 0;
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid #eaeaea;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links li a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    /* Display hamburger icon */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hide social links on mobile */
+    .social-links {
+        display: none;
+    }
+
+    /* Show nav-links when active */
+    .nav-links.nav-active {
+        display: flex;
+    }
+}
+
+/* Hover Effects for Navigation Links */
+.nav-links a {
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #007BFF;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Hover Effects for Social Links */
+.social-links a {
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007BFF;
+}
+
+/* Hamburger Icon Animation */
+.hamburger.toggle .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.toggle .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+/* Profile Picture Styling */
+#home img {
+    width: 200px;
+    border-radius: 10%;
+}
+
+/* Grid Layout for Projects */
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Hide additional projects */
+.hidden-project {
+    display: none;
+}
+
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* for 16:9 aspect ratio */
+    padding-top: 25px;
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hide additional blog posts */
+.hidden-blog {
+    display: none;
+}
+
+.hidden-experience{
+    display: none;
+}
+
+/* Load More Link Container */
+.load-more-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* Style for the Load More/Load Less links */
+.load-more-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s;
+    margin: 20px 0;
+    float: right;
+}
+
+.load-more-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #007BFF;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+.load-more-link:hover {
+    color: #007BFF;
+}
+
+.load-more-link:hover::after {
+    width: 100%;
+}
+
+/* Experience Entry Styling */
+.experience-entry {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.experience-entry img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px; /* Optional: adds slight rounding to the corners */
+}
+
+.experience-entry h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .experience-entry {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .experience-entry img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
