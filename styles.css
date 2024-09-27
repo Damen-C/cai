@@ -188,6 +188,17 @@ footer {
         max-width: 90%;
     }
 
+    .experience-entry {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+        text-align: left; /* Align text to the left */
+    }
+
+    .experience-entry img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
 }
 
 /* Hover Effects for Navigation Links */
@@ -362,16 +373,4 @@ img {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .experience-entry {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .experience-entry img {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-}
 
