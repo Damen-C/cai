@@ -274,10 +274,10 @@ img {
     display: none;
 }
 
-/* Hide additional experiences */
-.hidden-experience {
+.experience-entry.hidden-experience {
     display: none;
 }
+
 /* Load More Link Container */
 .load-more-container {
     display: flex;
