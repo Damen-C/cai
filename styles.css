@@ -92,12 +92,6 @@ footer {
     border-top: 1px solid #eaeaea;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-}
-
 /* Existing styles... */
 
 /* Hamburger Menu Styles */
