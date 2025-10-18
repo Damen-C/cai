@@ -310,6 +310,11 @@ img {
     display: none;
 }
 
+.blog-placeholder {
+    color: #666;
+    font-style: italic;
+}
+
 /* Load More Link Container */
 .load-more-container {
     display: flex;
@@ -370,5 +375,4 @@ img {
 .hidden-experience {
     display: none;
 }
-
 
