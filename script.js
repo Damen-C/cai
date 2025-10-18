@@ -29,6 +29,21 @@ const blogsList = document.getElementById('blogsList');
 const blogPostsInitiallyVisible = 3;
 const defaultExcerptLength = 320;
 let blogsExpanded = false;
+const normalizeLink = (link = '') => link.split('?')[0];
+const staticPostLinks = blogsList
+    ? new Set(
+        Array.from(blogsList.querySelectorAll('[data-post-url]'))
+            .map((post) => normalizeLink(post.dataset.postUrl || ''))
+            .filter(Boolean)
+    )
+    : new Set();
+let dynamicBlogsContainer = blogsList ? blogsList.querySelector('[data-dynamic-container="true"]') : null;
+
+if (blogsList && !dynamicBlogsContainer) {
+    dynamicBlogsContainer = document.createElement('div');
+    dynamicBlogsContainer.setAttribute('data-dynamic-container', 'true');
+    blogsList.appendChild(dynamicBlogsContainer);
+}
 
 const updateBlogVisibility = () => {
     if (!blogsList) {
@@ -70,13 +85,21 @@ const buildExcerpt = (html) => {
 };
 
 const renderMediumPosts = (items) => {
-    if (!blogsList) {
+    if (!blogsList || !dynamicBlogsContainer) {
         return;
     }
 
-    blogsList.innerHTML = '';
+    dynamicBlogsContainer.innerHTML = '';
 
-    items.forEach((item) => {
+    const filteredItems = items.filter((item) => !staticPostLinks.has(normalizeLink(item.link)));
+
+    if (!filteredItems.length) {
+        dynamicBlogsContainer.innerHTML = '<p class="blog-placeholder">No newer Medium posts right now.</p>';
+        updateBlogVisibility();
+        return;
+    }
+
+    filteredItems.forEach((item) => {
         const blogPost = document.createElement('div');
         blogPost.className = 'blog-post';
 
@@ -99,18 +122,19 @@ const renderMediumPosts = (items) => {
         blogPost.appendChild(title);
         blogPost.appendChild(description);
 
-        blogsList.appendChild(blogPost);
+        dynamicBlogsContainer.appendChild(blogPost);
     });
 
     updateBlogVisibility();
 };
 
 const showBlogError = (message) => {
-    if (!blogsList) {
+    const targetContainer = dynamicBlogsContainer || blogsList;
+    if (!targetContainer) {
         return;
     }
 
-    blogsList.innerHTML = `<p class="blog-placeholder">${message}</p>`;
+    targetContainer.innerHTML = `<p class="blog-placeholder">${message}</p>`;
 
     if (loadMoreBlogsBtn) {
         loadMoreBlogsBtn.style.display = 'none';
