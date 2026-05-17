@@ -9,19 +9,29 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('toggle');
 });
 
-// Load More/Less Functionality for Projects
-const loadMoreProjectsBtn = document.getElementById('loadMoreProjectsBtn');
-const hiddenProjects = document.querySelectorAll('.hidden-project');
-let projectsVisible = false;
+/**
+ * Generic Toggle Function for "Load More" sections
+ * @param {string} btnId - ID of the button
+ * @param {string} hiddenClass - Class of elements to toggle
+ * @param {string} displayStyle - CSS display type (block/flex)
+ */
+const setupLoadMore = (btnId, hiddenClass, displayStyle = 'block') => {
+    const btn = document.getElementById(btnId);
+    const hiddenItems = document.querySelectorAll(hiddenClass);
+    let isVisible = false;
 
-loadMoreProjectsBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    projectsVisible = !projectsVisible;
-    hiddenProjects.forEach(project => {
-        project.style.display = projectsVisible ? 'block' : 'none';
+    if (!btn) return;
+
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        isVisible = !isVisible;
+        hiddenItems.forEach(item => item.style.display = isVisible ? displayStyle : 'none');
+        btn.textContent = isVisible ? 'Load Less' : 'Load More';
     });
-    loadMoreProjectsBtn.textContent = projectsVisible ? 'Load Less' : 'Load More';
-});
+};
+
+setupLoadMore('loadMoreProjectsBtn', '.hidden-project', 'block');
+setupLoadMore('loadMoreExperiencesBtn', '.hidden-experience', 'flex');
 
 // Load More/Less Functionality for Blogs
 const loadMoreBlogsBtn = document.getElementById('loadMoreBlogsBtn');
@@ -81,7 +91,7 @@ const getExcerptLength = () => {
 const buildExcerpt = (html) => {
     const text = stripHtml(html).replace(/\s+/g, ' ').trim();
     const maxLength = getExcerptLength();
-    return text.length > maxLength ? `${text.slice(0, maxLength - 1)}…` : text;
+    return text.length > maxLength ? `${text.slice(0, maxLength - 3)}...` : text;
 };
 
 const renderMediumPosts = (items) => {
@@ -112,8 +122,7 @@ const renderMediumPosts = (items) => {
         anchor.href = item.link;
         anchor.target = '_blank';
         anchor.rel = 'noopener noreferrer';
-        anchor.style.color = '#007BFF';
-        anchor.style.textDecoration = 'none';
+        anchor.className = 'accent-link';
         anchor.textContent = 'Read More';
 
         description.textContent = excerpt ? `${excerpt} ` : '';
@@ -192,17 +201,3 @@ if (loadMoreBlogsBtn) {
 
 updateBlogVisibility();
 fetchMediumPosts();
-
-// Load More/Less Functionality for Experiences
-const loadMoreExperiencesBtn = document.getElementById('loadMoreExperiencesBtn');
-const hiddenExperiences = document.querySelectorAll('.hidden-experience');
-let experiencesVisible = false;
-
-loadMoreExperiencesBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    experiencesVisible = !experiencesVisible;
-    hiddenExperiences.forEach(experience => {
-        experience.style.display = experiencesVisible ? 'flex' : 'none';
-    });
-    loadMoreExperiencesBtn.textContent = experiencesVisible ? 'Load Less' : 'Load More';
-});

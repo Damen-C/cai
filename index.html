@@ -6,9 +6,6 @@
 
     <title>Danmeng.C</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Link to Helvetica font -->
-    <link href="https://fonts.googleapis.com/css2?family=Helvetica&display=swap" rel="stylesheet">
-
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -31,14 +28,14 @@
         <div class="logo">
             <a href="#">Danmeng CAI</a>
         </div>
-        
+
         <!-- Hamburger Icon -->
-        <div class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" role="button">
+        <button class="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
-        </div>
-        
+        </button>
+
 
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
@@ -49,8 +46,8 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="social-links">
-            <a href="https://medium.com/@cd_24" target="_blank">Medium</a>
-            <a href="https://github.com/Damen-C" target="_blank">GitHub</a>
+            <a href="https://medium.com/@cd_24" target="_blank" rel="noopener noreferrer">Medium</a>
+            <a href="https://github.com/Damen-C" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
     </nav>
 
@@ -59,17 +56,17 @@
         <h1>Welcome to My Portfolio</h1>
         <div class="home-content">
             <img src="images/profile.jpg" alt="DC">
-            <p>Hello! I'm Danmeng CAI, an AI Engineer at 
-            <a href="https://www.fcnt.com/" target="_blank" style="color: #007BFF; text-decoration: none;">FCNT</a> (Lenovo Group) in Kanagawa, Japan. 
+            <p>Hello! I'm Danmeng CAI, an AI Engineer at
+            <a href="https://www.fcnt.com/" target="_blank" rel="noopener noreferrer" class="accent-link">FCNT</a> (Lenovo Group) in Kanagawa, Japan.
             I work with the Motorola global team to create AI-powered features that enhance smartphone experiences
-            <br><br>I hold an MS in Informatics (NLP specialization) and an MA in International Area Studies from the University of Tsukuba. 
+            <br><br>I hold an MS in Informatics (NLP specialization) and an MA in International Area Studies from the University of Tsukuba.
             <br><br>My background spans AI product management, LLM development, and international collaboration, allowing me to connect technical expertise with global perspectives to deliver innovative and user-centered AI solutions.
             </p>
         </div>
     </section>
 
 
-    
+
 
     <!-- Projects Section -->
     <section id="projects" class="section">
@@ -79,75 +76,85 @@
         <div class="projects-list">
 
             <div class="project-item">
-                <img src="images/moto_ai.png" alt="localizationof AI features for Motorola smartphones">
+                <img src="images/MenuLens_App.png" alt="Mobile app interface of MenuLens showing OCR-scanned Japanese menu text and its corresponding English AI translation">
+                <h3>MenuLens - AI-powered Japanese menu translation app</h3>
+                <p>MenuLens is an Android app with a FastAPI backend that helps tourists in Japan scan Japanese menus and understand dishes in English.
+                    I designed and developed the end-to-end AI pipeline, including OCR with Google Cloud Vision, menu item extraction and English descriptions with Gemini,
+                    Firebase anonymous authentication, quota management, and an offline evaluation loop for prompt iteration.
+                </p>
+                <p>View the <a href="https://github.com/Damen-C/Project_MenuLens" target="_blank" rel="noopener noreferrer" class="accent-link">GitHub repository</a></p>
+            </div>
+
+            <div class="project-item">
+                <img src="images/moto_ai.png" alt="Localization of AI features for Motorola smartphones">
                 <h3>Localizing Moto AI features in Japanese market</h3>
                 <p>After joining Lenovo, I have been working on localizing AI features for Motorola smartphones to better suit the Japanese market.
                     I collaborate with cross-functional teams across China, the US, India, and Brazil to adapt AI functionalities, ensuring they meet local user preferences and cultural nuances.
                     I lead the testing team in Japan, providing weekly reports on localization progress and coordinating feedback to enhance feature performance.
                 </p>
-                <p>See the <a href="https://txbiz.tv-tokyo.co.jp/txn/news_txn/post_326785" target="_blank" style="color: #007BFF; text-decoration: none;">news about Moto AI</a></p>
+                <p>See the <a href="https://txbiz.tv-tokyo.co.jp/txn/news_txn/post_326785" target="_blank" rel="noopener noreferrer" class="accent-link">news about Moto AI</a></p>
             </div>
-         
+
             <div class="project-item">
                 <img src="images/FamLink.png" alt="FamLink - system that connects and supports families">
                 <h3>FamLink - system that connects and supports families</h3>
-                <p>As part of the FCNT team, I joined the Motorola Hackathon 2025 in Xiamen and organized the development of FamLink, 
-                    a proof-of-concept AI service that connects elderly users’ devices, secure family databases, 
-                    and conversational AI agents to enable remote wellbeing monitoring. 
+                <p>As part of the FCNT team, I joined the Motorola Hackathon 2025 in Xiamen and organized the development of FamLink,
+                    a proof-of-concept AI service that connects elderly users' devices, secure family databases,
+                    and conversational AI agents to enable remote wellbeing monitoring.
                     The PoC validated end-to-end data flow, context reasoning, and natural language interaction on an Android prototype.
                 </p>
-                <p>See our <a href="https://drive.google.com/file/d/1t8-FN6R1u5y1Rtky6QW0FoZihjFId2dP/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Presentation materials</a></p>
+                <p>See our <a href="https://drive.google.com/file/d/1t8-FN6R1u5y1Rtky6QW0FoZihjFId2dP/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="accent-link">Presentation materials</a></p>
             </div>
 
 
             <!-- Individual Project Items -->
             <div class="project-item">
-                <img src="images/AI-minutes.png" alt="Project 5 Image">
+                <img src="images/AI-minutes.png" alt="AI Minutes transcription service interface">
                 <h3>AI Minutes, an AI-powered transcription service
                 </h3>
-                <p>AI Minutes is designed to securely and accurately generate meeting minutes for various corporate settings. 
-                   As the Product Manager, I lead our AI and Development teams in integrating advanced technologies into our web application. 
+                <p>AI Minutes is designed to securely and accurately generate meeting minutes for various corporate settings.
+                   As the Product Manager, I lead our AI and Development teams in integrating advanced technologies into our web application.
                    This includes developing and implementing Speech-to-Text models, Speaker Diarization models, and Large Language Models to enhance transcription accuracy and speaker identification.
                 </p>
-                <p>Check our <a href="https://www.ai-minutes.jp" target="_blank" style="color: #007BFF; text-decoration: none;">Product</a></p>
+                <p>Check our <a href="https://www.ai-minutes.jp" target="_blank" rel="noopener noreferrer" class="accent-link">Product</a></p>
             </div>
 
             <!-- Individual Project Items -->
-            <div class="project-item hidden-project">
-                <img src="images/MTFS.png" alt="Project 1 Image">
-                <h3>A Multi-Target Feature Selection Method 
-                    in Predicting Psychological Status with Text Data 
+            <div class="project-item">
+                <img src="images/MTFS.png" alt="Research overview for multi-target feature selection with text data">
+                <h3>A Multi-Target Feature Selection Method
+                    in Predicting Psychological Status with Text Data
                 </h3>
-                <p>Based on previous literature on Multi-Target Feature Selection (MTFS) and psychology, 
-                   this research proposes a MTFS method to mitigate overfitting when predicting psychological status using text data. 
+                <p>Based on previous literature on Multi-Target Feature Selection (MTFS) and psychology,
+                   this research proposes a MTFS method to mitigate overfitting when predicting psychological status using text data.
                 </p>
-                <p><a href="https://link.springer.com/chapter/10.1007/978-3-031-78090-5_16" target="_blank" style="color: #007BFF; text-decoration: none;">Paper</a> published in Information Integration and Web Intelligence (iiwas 2024)</p>
+                <p><a href="https://link.springer.com/chapter/10.1007/978-3-031-78090-5_16" target="_blank" rel="noopener noreferrer" class="accent-link">Paper</a> published in Information Integration and Web Intelligence (iiwas 2024)</p>
             </div>
 
-            <div class="project-item hidden-project">
+            <div class="project-item">
                 <img src="images/TSUKUBA.png" alt="Academic poster presenting NLP analysis of expert feedback for IPBES regional assessments with multiple text sections and charts at Tsukuba Conference 2023 in a formal conference setting">
                 <h3>Utilizing NLP techniques to Analyze Expert Feedback on IPBES's Regional Assessments</h3>
-                <p>The IPBES is an intergovernmental body that has taken significant role in examining biodiversity trends. 
+                <p>The IPBES is an intergovernmental body that has taken significant role in examining biodiversity trends.
                    In this project, we leverage NLP techniques to undertake contextual semantic network examination of the expert comments from IPBES.</p>
-                <p><a href="https://drive.google.com/file/d/1Dh6hzy-xzOXq64BY2P3bWYh4Xgwwx8Hx/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Poster</a> accepted by Tsukuba Conference 2023</p>
+                <p><a href="https://drive.google.com/file/d/1Dh6hzy-xzOXq64BY2P3bWYh4Xgwwx8Hx/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="accent-link">Poster</a> accepted by Tsukuba Conference 2023</p>
             </div>
 
             <div class="project-item hidden-project">
                 <img src="images/DEIM.png" alt="Academic poster titled University Students Temporal Trends on X and Their Effects on Subjective Well-being during the COVID-19 Pandemic with graphs and explanatory text displayed in a calm research environment">
                 <h3>University Students' Temporal Trends on X and Their Effects on Subjective Well-being during the COVID-19 Pandemic: Examination from a Two-Year Study of Posts</h3>
-                <p>Utilizing NLP techniques, we extracted nouns from Japanese tweets as language features. 
-                   These features were then used in regression analyses to link with subjective well-being scores,  
+                <p>Utilizing NLP techniques, we extracted nouns from Japanese tweets as language features.
+                   These features were then used in regression analyses to link with subjective well-being scores,
                    followed by visualization through a new word cloud technique.</p>
-                <p><a href="https://drive.google.com/file/d/1xhLDRDa6ThaWbsqnQKc25llPQxKucUWB/view?usp=sharing" target="_blank" style="color: #007BFF; text-decoration: none;">Paper</a> accepted by DEIM 2024</p>
+                <p><a href="https://drive.google.com/file/d/1xhLDRDa6ThaWbsqnQKc25llPQxKucUWB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="accent-link">Paper</a> accepted by DEIM 2024</p>
             </div>
 
 
 
             <div class="project-item hidden-project">
-                <img src="images/MAYER.png" alt="Project 4 Image">
+                <img src="images/MAYER.png" alt="Lyrics analysis visualization for songs by John Mayer">
                 <h3>Lyrics Analysis on Songs made by John Mayer</h3>
                 <p>I analyze the lyrics of songs made by John Mayer using NLP.</p>
-                <p><a href="https://github.com/Damen-C/Lyrics-Analysis-on-Music-Made-by-John-Mayer" target="_blank" style="color: #007BFF; text-decoration: none;">Link</a> to the full project</p>
+                <p><a href="https://github.com/Damen-C/Lyrics-Analysis-on-Music-Made-by-John-Mayer" target="_blank" rel="noopener noreferrer" class="accent-link">Link</a> to the full project</p>
             </div>
 
             <!-- <div class="project-item hidden-project">
@@ -155,7 +162,7 @@
                     <iframe src="https://www.youtube.com/embed/bfUd3zWUy2c?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <h3>A Short Introduction to Applications of Natural Language Processing</h3>
-                <p>To further interest for people who want to learn about NLP, 
+                <p>To further interest for people who want to learn about NLP,
                    examples of machine translation, speech recognition, and sentiment analysis are presented in this short video.</p>
             </div> -->
         </div><!-- Add more project-item divs as needed -->
@@ -176,18 +183,18 @@
                 <h3>Utilizing NLP to Analyze Expert Feedback on IPBES's Regional Assessment</h3>
                 <p>I walk through how qualitative expert feedback can be transformed into structured insights using topic modeling, sentiment analysis, and clustering to support biodiversity research.
                     <a href="https://medium.com/@cd_24/utilizing-natural-language-processing-techniques-to-analyze-expert-feedback-on-ipbess-regional-567294729e3a"
-                       target="_blank" style="color: #007BFF; text-decoration: none;">Read More</a>
+                       target="_blank" rel="noopener noreferrer" class="accent-link">Read More</a>
                 </p>
             </div>
             <div class="blog-post blog-post-static" data-post-url="https://medium.com/@cd_24/bert-vs-lstm-performances-in-sentiment-classification-b82075184d60">
                 <h3>BERT vs. LSTM: Performance in Sentiment Classification</h3>
                 <p>I compare BERT and LSTM models on accuracy and training time for sentiment analysis, showing where transformer-based approaches shine and where lighter recurrent models still win.
                     <a href="https://medium.com/@cd_24/bert-vs-lstm-performances-in-sentiment-classification-b82075184d60"
-                       target="_blank" style="color: #007BFF; text-decoration: none;">Read More</a>
+                       target="_blank" rel="noopener noreferrer" class="accent-link">Read More</a>
                 </p>
             </div>
             <div class="blogs-dynamic" data-dynamic-container="true">
-                <div class="blog-placeholder">Loading latest Medium posts…</div>
+                <div class="blog-placeholder">Loading latest Medium posts...</div>
             </div>
             <noscript><p class="blog-placeholder">Enable JavaScript to see the latest posts.</p></noscript>
         </div>
@@ -227,7 +234,7 @@
         </div>
 
         <div class="education-entry">
-            <h3>Exchange Program (Coursework)</h3>
+            <h3>Exchange Program (Coursework in Computer Science and Data Science)</h3>
             <p>Washington University in St. Louis, 2019-2020</p>
         </div>
 
@@ -244,25 +251,25 @@
 
         <!-- Experience Entry 0 -->
 		<div class="experience-entry">
-			<img src="images/FCNT.jpg" alt="Company 0 Logo">
+			<img src="images/FCNT.jpg" alt="FCNT logo">
 			<div>
-				<h3>AI Engineer at 
-                    <a href="https://www.fcnt.com/" target="_blank" style="color: #007BFF; text-decoration: none;">FCNT</a> (Lenovo Group)</h3>
+				<h3>AI Engineer at
+                    <a href="https://www.fcnt.com/" target="_blank" rel="noopener noreferrer" class="accent-link">FCNT</a> (Lenovo Group)</h3>
 				<p>Years Worked: May 2025 - Current</p>
-				<p>I lead the Japanese testing team, ensuring that AI features are effectively adapted to local contexts and user needs. 
-                    I provide weekly progress reports on AI localization to teams in China, the US, and India, enabling alignment across regions. 
+				<p>I lead the Japanese testing team, ensuring that AI features are effectively adapted to local contexts and user needs.
+                    I provide weekly progress reports on AI localization to teams in China, the US, and India, enabling alignment across regions.
                     I also work closely with Brazilian and Chinese teams to refine prompts, resulting in more accurate and user-friendly AI outputs.
                 </p>
 			</div>
 		</div>
 		<!-- Experience Entry 1 -->
 		<div class="experience-entry">
-			<img src="images/CMR.png" alt="Company 1 Logo">
+			<img src="images/CMR.png" alt="Commerce Robotics logo">
 			<div>
-				<h3>Product Manager in AI Application Development at 
-                    <a href="https://commerce-robotics.com" target="_blank" style="color: #007BFF; text-decoration: none;">Commerce Robotics Inc.</a></h3>
+				<h3>Product Manager in AI Application Development at
+                    <a href="https://commerce-robotics.com" target="_blank" rel="noopener noreferrer" class="accent-link">Commerce Robotics Inc.</a></h3>
 				<p>Years Worked: Oct. 2024 - Apr. 2025</p>
-				<p>I manage a team of AI engineers in Vietnam and developers in India, collaborating to create innovative AI-driven applications. 
+				<p>I manage a team of AI engineers in Vietnam and developers in India, collaborating to create innovative AI-driven applications.
                    Additionally, I contribute to the Global Division Department by driving strategies to enhance sales performance in Japan's online shopping marketplaces.
                 </p>
 			</div>
@@ -270,69 +277,69 @@
 
 		<!-- Experience Entry 2 -->
 		<div class="experience-entry">
-			<img src="images/FWH.jpeg" alt="Company 2 Logo">
+			<img src="images/FWH.jpeg" alt="Free Web Hope logo">
 			<div>
-				<h3>LLM Intern at 
-                    <a href="https://www.fwh.co.jp" target="_blank" style="color: #007BFF; text-decoration: none;">Free Web Hope Inc.</a></h3>
+				<h3>LLM Intern at
+                    <a href="https://www.fwh.co.jp" target="_blank" rel="noopener noreferrer" class="accent-link">Free Web Hope Inc.</a></h3>
 				<p>Years Worked: Feb. 2024 - Sep. 2024</p>
-				<p>I collaborated on the LLM-Creative project, focusing on understanding the company's workflow and exploring improvements to the creative production process using LLMs 
-					for more efficient, reproducible outputs. Additionally, I researched how to use LLM tools for generating advertising images through Midjourney and 
-					explored video generation methods like Runway Gen-3. I also developed a customized ChatGPT model that generates catchy copywriting from URLs and 
+				<p>I collaborated on the LLM-Creative project, focusing on understanding the company's workflow and exploring improvements to the creative production process using LLMs
+					for more efficient, reproducible outputs. Additionally, I researched how to use LLM tools for generating advertising images through Midjourney and
+					explored video generation methods like Runway Gen-3. I also developed a customized ChatGPT model that generates catchy copywriting from URLs and
 					utilized OpenAI's API in Google Apps Script to automate customer and market data analysis, enhancing workflow efficiency.</p>
 			</div>
 		</div>
 
 		<!-- Experience Entry 3 -->
 		<div class="experience-entry">
-			<img src="images/CSH_1.jpg" alt="Company 3 Logo">
+			<img src="images/CSH_1.jpg" alt="Complexity Science Hub logo">
 			<div>
-				<h3>Research Intern at 
-                    <a href="https://csh.ac.at" target="_blank" style="color: #007BFF; text-decoration: none;">Complexity Science Hub</a></h3>
+				<h3>Research Intern at
+                    <a href="https://csh.ac.at" target="_blank" rel="noopener noreferrer" class="accent-link">Complexity Science Hub</a></h3>
 				<p>Years Worked: July 2024 - Aug. 2024</p>
-				<p>I focused on network analysis of conspiracy groups on Telegram, creating bipartite networks to explore the interactions between groups and authors. 
-				I utilized tools like NetworkX and Gephi to calculate key metrics such as degree centrality, betweenness centrality, and PageRank. 
+				<p>I focused on network analysis of conspiracy groups on Telegram, creating bipartite networks to explore the interactions between groups and authors.
+				I utilized tools like NetworkX and Gephi to calculate key metrics such as degree centrality, betweenness centrality, and PageRank.
 				I categorized groups based on the number of authors and messages, analyzed shared authors between groups, and developed methods to calculate group closeness.</p>
 			</div>
 		</div>
 
 		<!-- Experience Entry 4 (Hidden by default) -->
 		<div class="experience-entry hidden-experience">
-			<img src="images/IUCN.png" alt="Company 4 Logo">
+			<img src="images/IUCN.png" alt="IUCN Japan Committee logo">
 			<div>
-				<h3>Intern at 
-                    <a href="https://www.iucn.jp/" target="_blank" style="color: #007BFF; text-decoration: none;">International Union for Conservation of Nature Japan Committee (IUCN-J)</a></h3>
+				<h3>Intern at
+                    <a href="https://www.iucn.jp/" target="_blank" rel="noopener noreferrer" class="accent-link">International Union for Conservation of Nature Japan Committee (IUCN-J)</a></h3>
 				<p>Years Worked: Aug. 2024 - Sep. 2024 & Sep. 2023 - Nov. 2023</p>
-				<p>During my internship at IUCN-J, I participated in The 25th Subsidiary Body on Scientific, Technical and Technological Advice (SBSTTA 25) in Nairobi, Kenya from 15-19 Oct 2023, 
-				as well as the 8th IUCN Asia Regional Conservation Forum (RCF) in Bangkok, Thailand from 3-5 Sep 2024. 
+				<p>During my internship at IUCN-J, I participated in The 25th Subsidiary Body on Scientific, Technical and Technological Advice (SBSTTA 25) in Nairobi, Kenya from 15-19 Oct 2023,
+				as well as the 8th IUCN Asia Regional Conservation Forum (RCF) in Bangkok, Thailand from 3-5 Sep 2024.
 				My role involved writing reports in English and Japanese to summarize key points from the conference, conducting interviews with delegates, and writing articles based on those interviews.</p>
-                <p>Writing Samples: <a href="https://www.iucn.jp/report/iucn-arcf2024/2024/09/06/1979/" 
-                    target="_blank" style="color: #007BFF; text-decoration: none;">Reimagining Conservation in Thailand: A Nature Positive Future</a>, 
-                    <a href="https://www.iucn.jp/report/2023/10/27/932/" 
-                    target="_blank" style="color: #007BFF; text-decoration: none;">Bridging Perspectives: Climate and Biodiversity Conversations from Egypt and Somalia</a> </p>
+                <p>Writing Samples: <a href="https://www.iucn.jp/report/iucn-arcf2024/2024/09/06/1979/"
+                    target="_blank" rel="noopener noreferrer" class="accent-link">Reimagining Conservation in Thailand: A Nature Positive Future</a>,
+                    <a href="https://www.iucn.jp/report/2023/10/27/932/"
+                    target="_blank" rel="noopener noreferrer" class="accent-link">Bridging Perspectives: Climate and Biodiversity Conversations from Egypt and Somalia</a> </p>
 			</div>
 		</div>
 
 		<!-- Experience Entry 5 (Hidden by default) -->
 		<div class="experience-entry hidden-experience">
-			<img src="images/DABOT.jpeg" alt="Company 5 Logo">
+			<img src="images/DABOT.jpeg" alt="Dabot Chatbot Project logo">
 			<div>
-				<h3>Technical Assistant in 
-                    <a href="https://dac.tsukuba.ac.jp/radd/joint-base/dabot/" target="_blank" style="color: #007BFF; text-decoration: none;">Dabot Chatbot Project at University of Tsukuba</a></h3>
+				<h3>Technical Assistant in
+                    <a href="https://dac.tsukuba.ac.jp/radd/joint-base/dabot/" target="_blank" rel="noopener noreferrer" class="accent-link">Dabot Chatbot Project at University of Tsukuba</a></h3>
 				<p>Years Worked: May 2023 - July 2024</p>
-				<p>"Dabot: Mr. Dax's Consultation Room" is a chatbot that automatically suggests useful coping information for people with a variety of neurological characteristics, mainly in the college age group. 
+				<p>"Dabot: Mr. Dax's Consultation Room" is a chatbot that automatically suggests useful coping information for people with a variety of neurological characteristics, mainly in the college age group.
 					In this project, my responsibilities involved writing Google Apps Scripts for task automation and visualizing user data using Python.</p>
 			</div>
 		</div>
 
 		<!-- Experience Entry 6 (Hidden by default) -->
 		<div class="experience-entry hidden-experience">
-			<img src="images/YBF.png" alt="Company 6 Logo">
+			<img src="images/YBF.png" alt="Yamada Bee Farm logo">
 			<div>
-				<h3>Account Manager of Chinese Social Media at 
-                    <a href="https://www.3838.com/" target="_blank" style="color: #007BFF; text-decoration: none;">Yamada Bee Farm </a></h3>
+				<h3>Account Manager of Chinese Social Media at
+                    <a href="https://www.3838.com/" target="_blank" rel="noopener noreferrer" class="accent-link">Yamada Bee Farm </a></h3>
 				<p>Years Worked: April 2021 - July 2022</p>
-				<p>In this role, I oversaw official accounts across diverse social media platforms and fostered collaborations with business partners in Japan, mainland China, Taiwan, Vietnam, and Singapore. 
-					This experience notably contributed to the development of my adept communication and negotiation skills. 
+				<p>In this role, I oversaw official accounts across diverse social media platforms and fostered collaborations with business partners in Japan, mainland China, Taiwan, Vietnam, and Singapore.
+					This experience notably contributed to the development of my adept communication and negotiation skills.
 					It was during this period that my interest in both social media research and the practical applications of natural language processing in business was sparked.</p>
 			</div>
 		</div>
@@ -349,7 +356,7 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to email me at: <a href="mailto:youremail@example.com"  target="_blank" style="color: #007BFF; text-decoration: none;">caidanmeng@gmail.com</a></p>
+        <p>If you'd like to get in touch, feel free to email me at: <a href="mailto:caidanmeng@gmail.com" class="accent-link">caidanmeng@gmail.com</a></p>
     </section>
     <!-- Footer -->
     <footer>
